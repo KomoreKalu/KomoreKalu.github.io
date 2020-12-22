@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
 <meta name="renderer" content="webkit">
 
-<title>标签: Linux | Akihi</title>
+<title>在Debian Bullseye上使用Fcitx5-rime | Akihi</title>
 
 <meta name="format-detection" content="telephone=no"/>
 
 
 
-  <meta name="keywords" content="iris">
+  <meta name="keywords" content="iris,tag.name,tag.name">
 
 
 
@@ -64,16 +64,19 @@
 
   
 
-  <meta property="og:title" content="标签: Linux | Akihi">
+  <meta property="og:title" content="在Debian Bullseye上使用Fcitx5-rime | Akihi">
 <meta property="og:type" content="blog">
-<meta property="og:url" content="https://akihi.ink/tags/Linux/">
+<meta property="og:url" content="https://akihi.ink/2020/12/12/use-the-fcitx5-rime-on-Debian-Bullseye/">
 <meta property="og:image" content="/favicon-192x192.png">
 
 
-<meta property="og:article:tag" content="iris">
+<meta property="og:article:tag" content="iris,tag.name,tag.name">
 
 
 
+
+  <meta property="article:published_time" content="Sat Dec 12 2020 20:47:32 GMT+0800">
+  <meta property="article:modified_time" content="Mon Dec 14 2020 21:32:06 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -95,6 +98,40 @@
 
   
 
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://akihi.ink"
+    },
+    "headline": "在Debian Bullseye上使用Fcitx5-rime",
+    
+    "datePublished": "2020-12-12T12:47:32.000Z",
+    "dateModified": "2020-12-14T13:32:06.764Z",
+    "author": {
+        "@type": "Person",
+        "name": "",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Akihi",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris,tag.name,tag.name",
+    "description": ""
+}
+</script>
 
 
   
@@ -147,43 +184,103 @@ if ('serviceWorker' in navigator) {
 
     <main class="main">
       
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      在Debian Bullseye上使用Fcitx5-rime
+    </h1>
+    <section class="post-meta">
+      <time datetime="2020-12-12T12:47:32.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2020-12-12
+</time>
 
-<article class="archive">
-  <header class="archive-header">
-    <h1 class="archive-title">标签: Linux</h1>
+    </section>
   </header>
-  <section class="archive-content">
-    <p class="counter">该标签下共有 4 文章。</p>
-    
-      <h2 class="year">2020</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2020/12/12/use-the-fcitx5-rime-on-Debian-Bullseye/">在Debian Bullseye上使用Fcitx5-rime</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/22/run-The-Binding-of-Isaac-Rebitrh-on-Debian/">在Debian上玩以撒</a>
-          </li>
-        
-      </ul>
-    
-      <h2 class="year">2019</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2019/08/24/HTC-Type-C-to-3-5mm-Headphone-Jack-volume-too-low-on-Ubuntu/">Ubuntu上HTC转接线数字输出音量过小</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/19/a-situation-that-deleted-files-still-take-up-space-on-linux/">一种linux上文件删除后仍然占用空间的状况</a>
-          </li>
-        
-      </ul>
-    
+  <aside class="post-aside">
+  
+
+</aside>
+
+  <section class="post-content">
+    <a id="more"></a> 
+
+<p>长话短说</p>
+<p>安装 <code>sudo apt install fcitx5 fcitx5-rime fcitx5-material-color</code></p>
+<p>配置 <code>fcitx5-config-qt</code></p>
+<p>添加<code>中州韻</code></p>
+<p><img src="https://i.loli.net/2020/12/12/ZIb1jSdmvMU6EC8.png" alt=""></p>
+<p>按需修改<code>附加组件 &gt; 经典用户界面</code></p>
+<p><img src="https://i.loli.net/2020/12/12/nAsB5GhNRE2mICa.png" alt=""></p>
+<p>启用单行模式</p>
+<p><code>vi ~/.config/fcitx5/conf/rime.conf</code></p>
+<p>修改或添加</p>
+<p><code>PreeditInApplication=True</code></p>
+<p>在<code>gnome-tweaks &gt; 开机启动程序</code>中添加Fcitx5</p>
+<p><img src="https://i.loli.net/2020/12/14/8SoIMjluR64avBp.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/12/12/Zy5Rg9UAXaSwPH8.png" alt=""></p>
+<p>相关</p>
+<ul>
+<li><a href="https://github.com/fcitx/fcitx5" target="_blank" rel="noopener">fcitx5</a></li>
+<li><a href="https://rime.im/" target="_blank" rel="noopener">RIME | 中州韻輸入法引擎</a></li>
+<li><a href="https://github.com/hosxy/Fcitx5-Material-Color" target="_blank" rel="noopener">Fcitx5-Material-Color</a></li>
+</ul>
+
   </section>
+  <footer class="post-meta">
+  
+
+  
+<section class="tags">
+  
+    <a href="/tags/Linux/">
+      <i class="fas fa-tag" aria-hidden></i>
+      Linux
+    </a>
+  
+    <a href="/tags/Fcitx5/">
+      <i class="fas fa-tag" aria-hidden></i>
+      Fcitx5
+    </a>
+  
+</section>
+
+
+</footer>
+
+  <div class="post-end" data-text="完"></div>
 </article>
 
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://akihi.ink/2020/12/12/use-the-fcitx5-rime-on-Debian-Bullseye/';
+      this.page.identifier = 'use-the-fcitx5-rime-on-Debian-Bullseye';
+      this.page.title = '在Debian Bullseye上使用Fcitx5-rime';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//akihi.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
 
 
 
