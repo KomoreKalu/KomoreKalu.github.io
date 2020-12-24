@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Akihi</title>
+  
+  
+  <link href="https://akihi.ink/atom.xml" rel="self"/>
+  
+  <link href="https://akihi.ink/"/>
+  <updated>2020-12-14T13:32:06.764Z</updated>
+  <id>https://akihi.ink/</id>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Debian Bullseye上使用Fcitx5-rime</title>
+    <link href="https://akihi.ink/2020/12/12/use-the-fcitx5-rime-on-Debian-Bullseye/"/>
+    <id>https://akihi.ink/2020/12/12/use-the-fcitx5-rime-on-Debian-Bullseye/</id>
+    <published>2020-12-12T12:47:32.000Z</published>
+    <updated>2020-12-14T13:32:06.764Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <p>长话短说</p><p>安装 <code>sudo apt install fcitx5 fcitx5-rime fcitx5-material-color</code></p><p>配置 <code>fcitx5-config-qt</code></p><p>添加<code>中州韻</code></p><p><img src="https://i.loli.net/2020/12/12/ZIb1jSdmvMU6EC8.png" alt=""></p><p>按需修改<code>附加组件 &gt; 经典用户界面</code></p><p><img src="https://i.loli.net/2020/12/12/nAsB5GhNRE2mICa.png" alt=""></p><p>启用单行模式</p><p><code>vi ~/.config/fcitx5/conf/rime.conf</code></p><p>修改或添加</p><p><code>PreeditInApplication=True</code></p><p>在<code>gnome-tweaks &gt; 开机启动程序</code>中添加Fcitx5</p><p><img src="https://i.loli.net/2020/12/14/8SoIMjluR64avBp.png" alt=""></p><p><img src="https://i.loli.net/2020/12/12/Zy5Rg9UAXaSwPH8.png" alt=""></p><p>相关</p><ul><li><a href="https://github.com/fcitx/fcitx5" target="_blank" rel="noopener">fcitx5</a></li><li><a href="https://rime.im/" target="_blank" rel="noopener">RIME | 中州韻輸入法引擎</a></li><li><a href="https://github.com/hosxy/Fcitx5-Material-Color" target="_blank" rel="noopener">Fcitx5-Material-Color</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt; 
+
+&lt;p&gt;长话短说&lt;/p&gt;
+&lt;p&gt;安装 &lt;code&gt;sudo apt install fcitx5 fcitx5-rime fcitx5-material-color&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置 &lt;code&gt;fcitx5-config-q</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://akihi.ink/tags/Linux/"/>
+    
+    <category term="Fcitx5" scheme="https://akihi.ink/tags/Fcitx5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怦然心动</title>
+    <link href="https://akihi.ink/2020/08/18/Flipped/"/>
+    <id>https://akihi.ink/2020/08/18/Flipped/</id>
+    <published>2020-08-18T14:17:39.000Z</published>
+    <updated>2020-08-18T14:26:13.471Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="文德琳·范·德拉安南"><a href="#文德琳·范·德拉安南" class="headerlink" title="文德琳·范·德拉安南"></a>文德琳·范·德拉安南</h4><blockquote><p>在俯瞰世界的时候感受着一份孤独的快乐。</p></blockquote><blockquote><p>我可以肯定她哭了，但我并没有真的看见她的眼泪。</p></blockquote><blockquote><p>我对他的感觉还不够明显吗？如果他知道，为什么又对我这么狠心。</p></blockquote><blockquote><p>我很怀疑，非常怀疑。我会是个让他们难堪的东西，是他们极力想忘掉的东西。我的父母一向看重事物的外在，尤其是爸爸。</p></blockquote><blockquote><p>当你回首过去，会发现这是很明显的事，也很容易作出抉择，但不幸的是，大多数人看到藏在表面之下的真相时，已经太晚了。</p></blockquote><blockquote><p>但我不是生气，也不是开心。当我躺在床上，试图理解这一切，我发现心中的不安甚至压倒了沮丧。我觉得好像有人在监视自己。我被自己吓得够呛，从床上跳起来，把窗户、橱柜和床底下都检查了一遍，但这种感觉始终还在。</p><p>直到将近午夜，我才明白那是什么。</p><p>是我自己，我在监视自己。</p></blockquote><blockquote><p>总的来说，我想让你的生活变成故事的续篇，想让你去构建未知的情节，去塑造你所熟知的角色，挖掘更深层次的含义，或者放眼更远的未来。构建你自己所坚信的未来，会让你的生活更加快乐，也许它会让你觉得艰难困苦，备受苦痛，但你最终会在生活里成长起来。</p></blockquote><blockquote><p>面对生活中的艰难困苦，并尽最大努力去保持一颗坚强的心。</p></blockquote><blockquote><p>如果我们只是从他人身上寻求幸福而不是从自身寻求的话，真正的爱将会远离我们。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;文德琳·范·德拉安南&quot;&gt;&lt;a href=&quot;#文德琳·范·德拉安南&quot; class=&quot;headerlink&quot; title=&quot;文德琳·范·德拉安南&quot;&gt;&lt;/a&gt;文德琳·范·德拉安南&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在俯瞰世界的时候感受着一份孤独的快乐。&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="书摘" scheme="https://akihi.ink/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>沉睡的森林</title>
+    <link href="https://akihi.ink/2020/08/02/Sleeping-Forest/"/>
+    <id>https://akihi.ink/2020/08/02/Sleeping-Forest/</id>
+    <published>2020-08-01T19:06:28.000Z</published>
+    <updated>2020-08-02T02:10:21.611Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="东野圭吾"><a href="#东野圭吾" class="headerlink" title="东野圭吾"></a>东野圭吾</h4><blockquote><p>他们的世界仅靠彼此之间的联系就能运转，不需要和那些与艺术无关的人来往。</p></blockquote><blockquote><p>能为了某一件事投入全部精力，这本身就值得敬佩。</p></blockquote><blockquote><p>在已是成人体形的前提下，重新进行彻底的基础训练。将此前依靠年轻和未发育的身材完成的动作，用成人的身体和娴熟的技巧来超越。</p></blockquote><blockquote><p>生活在不允许恋爱的世界中的人，就像做梦一般体验了短暂的甜蜜，又重新回到了原来的世界。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;东野圭吾&quot;&gt;&lt;a href=&quot;#东野圭吾&quot; class=&quot;headerlink&quot; title=&quot;东野圭吾&quot;&gt;&lt;/a&gt;东野圭吾&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;他们的世界仅靠彼此之间的联系就能运转，不需要和那些与艺术无关的人来往。&lt;/p&gt;
+&lt;/blockqu</summary>
+      
+    
+    
+    
+    
+    <category term="书摘" scheme="https://akihi.ink/tags/%E4%B9%A6%E6%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Debian上玩以撒</title>
+    <link href="https://akihi.ink/2020/05/22/run-The-Binding-of-Isaac-Rebitrh-on-Debian/"/>
+    <id>https://akihi.ink/2020/05/22/run-The-Binding-of-Isaac-Rebitrh-on-Debian/</id>
+    <published>2020-05-22T09:26:04.000Z</published>
+    <updated>2020-05-22T10:43:58.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>Debian 10 Gnome桌面环境使用了Wayland</p><p>导致一些比较老的游戏不能正常启动，比如以撒</p><p>这个问题折磨了我好久</p><p>最近才找到解决方案</p><hr><p><img src="https://i.loli.net/2020/05/22/I5fxbjZiRAQhTLm.png" alt="2020-05-22 16-15.png"></p><p>在游戏的属性=&gt;常规菜单中找到并勾选</p><p><code>强制使用特定 Steam Play 兼容性工具</code></p><p>选择<code>Proton 5.0-7</code></p><p><img src="https://i.loli.net/2020/05/22/UsP8wxhSON9aV62.png" alt="2020-05-22 16-15.png"></p><p>Steam会自动下载安装Proton</p><p>完成后点击开始游戏</p><p><img src="https://i.loli.net/2020/05/22/7Y4PrqFGdNuQ1VW.png" alt="2020-05-22 16-18.png"></p><p>这时还需要更新游戏</p><p><img src="https://i.loli.net/2020/05/22/lyKGhYPLomDEUF2.png" alt="2020-05-22 16-32.png"></p><p>安装Microsoft VC Redist Package</p><p><img src="https://i.loli.net/2020/05/22/GMoYDT9JidVQ6Bq.png" alt="2020-05-22 16-32.png"></p><p>之后就能正常启动以撒了</p><p><img src="https://i.loli.net/2020/05/22/Q6d2t4P7gGUYazB.png" alt="2020-05-22 16-33.png"></p><p>参考</p><ul><li><a href="https://steamcommunity.com/app/250900/discussions/0/133256240741213021/?ctp=7" target="_blank" rel="noopener">Linux wont start</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Debian 10 Gnome桌面环境使用了Wayland&lt;/p&gt;
+&lt;p&gt;导致一些比较老的游戏不能正常启动，比如以撒&lt;/p&gt;
+&lt;p&gt;这个问题折磨了我好久&lt;/p&gt;
+&lt;p&gt;最近才找到解决方案&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/20</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://akihi.ink/tags/Linux/"/>
+    
+    <category term="Steam" scheme="https://akihi.ink/tags/Steam/"/>
+    
+    <category term="游戏" scheme="https://akihi.ink/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝牙鼠标的多机运动</title>
+    <link href="https://akihi.ink/2020/05/10/let-bluetooth-mouse-pair-linux-and-windows/"/>
+    <id>https://akihi.ink/2020/05/10/let-bluetooth-mouse-pair-linux-and-windows/</id>
+    <published>2020-05-09T19:06:35.000Z</published>
+    <updated>2020-07-10T14:06:25.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>鸡掰的雷柏7200M异常的吃电池</p><p>上次新冠隔离期间突然没电(买不到电池)</p><p>害我一度没有鼠标用</p><a id="more"></a> <p>到这次没电才过了两个月(精确时间是64天)</p><p>而且这次我用的是南孚电池耶<img src="https://i.loli.net/2020/05/10/xzhUJ9m5ZfaYXWv.png" style="zoom:7%" /></p><p><img src="https://i.loli.net/2020/05/10/qDkKcNGC4WQVReA.png" alt="screenshot.png"></p><p>之后发现切换到 2.4G模式和给Win10配对的蓝牙模式(蓝色指示灯)能够正常使用</p><p><img src="https://i.loli.net/2020/05/10/I8hwGpLW9V5gdTZ.png" alt="2020-05-10 14-36-10 的屏幕截图.png"></p><p>Debian和Win10都是使用的BT4.0模式</p><p>但是似乎Debian配对的蓝牙模式实际是以BT3.0模式工作</p><p>而BT3.0模式的工作电流是另外两种模式的两倍多</p><p>因此会“没电”</p><p>接下来就是想办法让Debian和Win10共享蓝牙鼠标的同一个蓝牙模式</p><p>首先在Debian下与蓝牙鼠标配对</p><p>然后在Win10下与蓝牙鼠标配对(同一个蓝牙模式)</p><p><a href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec" target="_blank" rel="noopener">下载PSTools</a>并将PsExec.exe放置于<code>C:\Windows\System32</code>目录</p><p><img src="https://i.loli.net/2020/05/10/l7wrSJR2QeMi8nu.png" alt="Snipaste_2020-05-10"></p><p>以管理员模式运行Git(cmd也行)</p><p>执行<code>PsExec.exe -s -i regedit</code></p><p><img src="https://i.loli.net/2020/05/10/KD3rc8AMBFUJizg.png" alt="Snipaste_2020-05-10_01-49-47.png"></p><p>进入目录<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\PC mac\mouse mac</code></p><p>这里的PC mac和mouse mac对应笔记本和鼠标的mac 下同</p><p>记录信息备用</p><p><img src="https://i.loli.net/2020/05/10/eDrQmNXxoREO9HG.png" alt="Snipaste.png"></p><p>回到Debian</p><p>依次执行<code>sudo -i</code></p><p><code>vi /var/lib/bluetooth/PC mac/mouse mac/info</code></p><p><img src="https://i.loli.net/2020/05/10/xzRv7NdSfBgorQ5.png" alt="2020-05-10 17-30-17 的屏幕截图.png"></p><p>若在Win10给蓝牙鼠标后导致鼠标mac发生了变化，则需要将mouse mac目录名更改为变化后的值</p><p>编辑Debian下蓝牙鼠标的配对信息</p><blockquote><p>[IdentityResolvingKey]<br>Key=8A3146C8F9BFF77E0F41A8552AE57C0F  #对应Win10下IRK值(字母大写无空格)</p><p>[LongTermKey]<br>Key=6E83992107BBF1E79CCEC278F734C825  #对应Win10下LTK值(字母大写无空格)<br>Authenticated=0  #保持不变<br>EncSize=16  #16<br>EDiv=38290  #对应Win10下EDIV值的10进制<br>Rand=15929999167092382000  #对应Win10下ERand值的10进制</p></blockquote><p>保存后执行<code>service bluetooth restart</code>即可</p><p>参考</p><ul><li><a href="https://blog.csdn.net/huyuan7494/article/details/73571948" target="_blank" rel="noopener">WIN10和Ubuntu共享蓝牙4.0连接配对，鼠标键盘等，罗技M720，小米鼠标</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;鸡掰的雷柏7200M异常的吃电池&lt;/p&gt;
+&lt;p&gt;上次新冠隔离期间突然没电(买不到电池)&lt;/p&gt;
+&lt;p&gt;害我一度没有鼠标用&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="蓝牙" scheme="https://akihi.ink/tags/%E8%93%9D%E7%89%99/"/>
+    
+  </entry>
+  
+</feed>
