@@ -7,13 +7,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
 <meta name="renderer" content="webkit">
 
-<title>Tag: 路由器 | Akihi</title>
+<title>Padavan+OpenWrt旁路由启用ipv6 | Akihi</title>
 
 <meta name="format-detection" content="telephone=no"/>
 
+  <meta name="description" content="家里的辣鸡广电宽带终于到期了换了电信后顺便启用了ipv6">
 
 
-  <meta name="keywords" content="iris">
+
+  <meta name="keywords" content="iris,tag.name,tag.name">
 
 
 
@@ -64,16 +66,19 @@
 
   
 
-  <meta property="og:title" content="Tag: 路由器 | Akihi">
+  <meta property="og:title" content="Padavan+OpenWrt旁路由启用ipv6 | Akihi">
 <meta property="og:type" content="blog">
-<meta property="og:url" content="https://akihi.ink/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/">
+<meta property="og:url" content="https://akihi.ink/2021/01/13/enable-ipv6-for-Padavan-and-OpenWrt/">
 <meta property="og:image" content="/favicon-192x192.png">
 
+<meta property="og:description" content="家里的辣鸡广电宽带终于到期了换了电信后顺便启用了ipv6">
+<meta property="og:article:tag" content="iris,tag.name,tag.name">
 
-<meta property="og:article:tag" content="iris">
 
 
 
+  <meta property="article:published_time" content="Wed Jan 13 2021 21:42:55 GMT+0800">
+  <meta property="article:modified_time" content="Thu Jan 21 2021 23:37:39 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -95,6 +100,40 @@
 
   
 
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://akihi.ink"
+    },
+    "headline": "Padavan+OpenWrt旁路由启用ipv6",
+    
+    "datePublished": "2021-01-13T13:42:55.000Z",
+    "dateModified": "2021-01-21T15:37:39.810Z",
+    "author": {
+        "@type": "Person",
+        "name": "",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Akihi",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris,tag.name,tag.name",
+    "description": "家里的辣鸡广电宽带终于到期了换了电信后顺便启用了ipv6"
+}
+</script>
 
 
   
@@ -150,53 +189,105 @@ if ('serviceWorker' in navigator) {
 
     <main class="main">
       
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      Padavan+OpenWrt旁路由启用ipv6
+    </h1>
+    <section class="post-meta">
+      <time datetime="2021-01-13T13:42:55.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2021-01-13
+</time>
 
-<article class="archive">
-  <header class="archive-header">
-    <h1 class="archive-title">Tag: 路由器</h1>
+    </section>
   </header>
-  <section class="archive-content">
-    <p class="counter">4 posts in this tag.</p>
-    
-      <h2 class="year">2021</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2021/01/13/enable-ipv6-for-Padavan-and-OpenWrt/">Padavan+OpenWrt旁路由启用ipv6</a>
-          </li>
-        
-      </ul>
-    
-      <h2 class="year">2020</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2020/02/17/Build-Padavan-firmware-for-K2P/">给K2P编译Padavan固件</a>
-          </li>
-        
-      </ul>
-    
-      <h2 class="year">2019</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2019/03/18/build-OpenWrt-firmware-for-MiRouter3g/">给小米路由器3G编译OpenWrt固件</a>
-          </li>
-        
-      </ul>
-    
-      <h2 class="year">2018</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2018/06/03/router-k2t/">某讯K2t刷入breed</a>
-          </li>
-        
-      </ul>
-    
+  <aside class="post-aside">
+  
+
+</aside>
+
+  <section class="post-content">
+    <p>家里的辣鸡广电宽带终于到期了<br>换了电信后顺便启用了ipv6</p>
+<a id="more"></a>
+
+<blockquote>
+<p>主路由 红米ac2100 (Padavan)</p>
+<p>旁路由 贝壳云 (OpenWrt)</p>
+</blockquote>
+<p>Padavan:</p>
+<p><img src="https://i.loli.net/2021/01/21/VNpCRvmYdlJP3rX.png" alt=""></p>
+<p>只需要在 <code>外网 WAN - IPv6 协议</code> 里只需要将<code>IPv6 连接类型</code> 设置为<code>Native DHCPv6</code></p>
+<p>其它选项保持默认再应用设置</p>
+<p>OpenWrt:</p>
+<p><img src="https://i.loli.net/2021/01/21/XZFKGq2eDuCRYWr.png" alt=""></p>
+<p>在<code>网络 - 接口</code>里创建新接口</p>
+<p>名称随意</p>
+<p>新接口的协议选择 <code>DHCPv6客户端</code></p>
+<p>自定义接口 <code>@lan</code></p>
+<p>提交之后分配防火墙区域为lan </p>
+<p>保存&amp;应用之后再连接接口</p>
+<p>也可以使用如下命令创建/连接接口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">uci <span class="built_in">set</span> network.lan6=interface </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.ifname=@lan </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.proto=dhcpv6 </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.reqaddress=try</span><br><span class="line">uci <span class="built_in">set</span> network.lan6.reqprefix=auto </span><br><span class="line">uci commit network</span><br><span class="line">ifup lan6</span><br></pre></td></tr></table></figure>
+
+<p>弄好之后局域网中的设备就能使用ipv6了</p>
+<p><img src="https://i.loli.net/2021/01/21/KkxYgIhQm6sJ1XG.png" alt=""></p>
+
   </section>
+  <footer class="post-meta">
+  
+
+  
+<section class="tags">
+  
+    <a href="/tags/OpenWrt/">
+      <i class="fas fa-tag" aria-hidden></i>
+      OpenWrt
+    </a>
+  
+    <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/">
+      <i class="fas fa-tag" aria-hidden></i>
+      路由器
+    </a>
+  
+</section>
+
+
+</footer>
+
+  <div class="post-end" data-text="End"></div>
 </article>
 
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://akihi.ink/2021/01/13/enable-ipv6-for-Padavan-and-OpenWrt/';
+      this.page.identifier = 'enable-ipv6-for-Padavan-and-OpenWrt';
+      this.page.title = 'Padavan+OpenWrt旁路由启用ipv6';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//akihi.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
 
 
 

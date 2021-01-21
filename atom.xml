@@ -6,10 +6,31 @@
   <link href="https://akihi.ink/atom.xml" rel="self"/>
   
   <link href="https://akihi.ink/"/>
-  <updated>2020-12-14T13:32:06.764Z</updated>
+  <updated>2021-01-21T15:37:39.810Z</updated>
   <id>https://akihi.ink/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Padavan+OpenWrt旁路由启用ipv6</title>
+    <link href="https://akihi.ink/2021/01/13/enable-ipv6-for-Padavan-and-OpenWrt/"/>
+    <id>https://akihi.ink/2021/01/13/enable-ipv6-for-Padavan-and-OpenWrt/</id>
+    <published>2021-01-13T13:42:55.000Z</published>
+    <updated>2021-01-21T15:37:39.810Z</updated>
+    
+    <content type="html"><![CDATA[<p>家里的辣鸡广电宽带终于到期了<br>换了电信后顺便启用了ipv6</p><a id="more"></a><blockquote><p>主路由 红米ac2100 (Padavan)</p><p>旁路由 贝壳云 (OpenWrt)</p></blockquote><p>Padavan:</p><p><img src="https://i.loli.net/2021/01/21/VNpCRvmYdlJP3rX.png" alt=""></p><p>只需要在 <code>外网 WAN - IPv6 协议</code> 里只需要将<code>IPv6 连接类型</code> 设置为<code>Native DHCPv6</code></p><p>其它选项保持默认再应用设置</p><p>OpenWrt:</p><p><img src="https://i.loli.net/2021/01/21/XZFKGq2eDuCRYWr.png" alt=""></p><p>在<code>网络 - 接口</code>里创建新接口</p><p>名称随意</p><p>新接口的协议选择 <code>DHCPv6客户端</code></p><p>自定义接口 <code>@lan</code></p><p>提交之后分配防火墙区域为lan </p><p>保存&amp;应用之后再连接接口</p><p>也可以使用如下命令创建/连接接口</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">uci <span class="built_in">set</span> network.lan6=interface </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.ifname=@lan </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.proto=dhcpv6 </span><br><span class="line">uci <span class="built_in">set</span> network.lan6.reqaddress=try</span><br><span class="line">uci <span class="built_in">set</span> network.lan6.reqprefix=auto </span><br><span class="line">uci commit network</span><br><span class="line">ifup lan6</span><br></pre></td></tr></table></figure><p>弄好之后局域网中的设备就能使用ipv6了</p><p><img src="https://i.loli.net/2021/01/21/KkxYgIhQm6sJ1XG.png" alt=""></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;家里的辣鸡广电宽带终于到期了&lt;br&gt;换了电信后顺便启用了ipv6&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="OpenWrt" scheme="https://akihi.ink/tags/OpenWrt/"/>
+    
+    <category term="路由器" scheme="https://akihi.ink/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>在Debian Bullseye上使用Fcitx5-rime</title>
@@ -115,27 +136,6 @@
     <category term="Steam" scheme="https://akihi.ink/tags/Steam/"/>
     
     <category term="游戏" scheme="https://akihi.ink/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>蓝牙鼠标的多机运动</title>
-    <link href="https://akihi.ink/2020/05/10/let-bluetooth-mouse-pair-linux-and-windows/"/>
-    <id>https://akihi.ink/2020/05/10/let-bluetooth-mouse-pair-linux-and-windows/</id>
-    <published>2020-05-09T19:06:35.000Z</published>
-    <updated>2020-07-10T14:06:25.267Z</updated>
-    
-    <content type="html"><![CDATA[<p>鸡掰的雷柏7200M异常的吃电池</p><p>上次新冠隔离期间突然没电(买不到电池)</p><p>害我一度没有鼠标用</p><a id="more"></a> <p>到这次没电才过了两个月(精确时间是64天)</p><p>而且这次我用的是南孚电池耶<img src="https://i.loli.net/2020/05/10/xzhUJ9m5ZfaYXWv.png" style="zoom:7%" /></p><p><img src="https://i.loli.net/2020/05/10/qDkKcNGC4WQVReA.png" alt="screenshot.png"></p><p>之后发现切换到 2.4G模式和给Win10配对的蓝牙模式(蓝色指示灯)能够正常使用</p><p><img src="https://i.loli.net/2020/05/10/I8hwGpLW9V5gdTZ.png" alt="2020-05-10 14-36-10 的屏幕截图.png"></p><p>Debian和Win10都是使用的BT4.0模式</p><p>但是似乎Debian配对的蓝牙模式实际是以BT3.0模式工作</p><p>而BT3.0模式的工作电流是另外两种模式的两倍多</p><p>因此会“没电”</p><p>接下来就是想办法让Debian和Win10共享蓝牙鼠标的同一个蓝牙模式</p><p>首先在Debian下与蓝牙鼠标配对</p><p>然后在Win10下与蓝牙鼠标配对(同一个蓝牙模式)</p><p><a href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec" target="_blank" rel="noopener">下载PSTools</a>并将PsExec.exe放置于<code>C:\Windows\System32</code>目录</p><p><img src="https://i.loli.net/2020/05/10/l7wrSJR2QeMi8nu.png" alt="Snipaste_2020-05-10"></p><p>以管理员模式运行Git(cmd也行)</p><p>执行<code>PsExec.exe -s -i regedit</code></p><p><img src="https://i.loli.net/2020/05/10/KD3rc8AMBFUJizg.png" alt="Snipaste_2020-05-10_01-49-47.png"></p><p>进入目录<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\PC mac\mouse mac</code></p><p>这里的PC mac和mouse mac对应笔记本和鼠标的mac 下同</p><p>记录信息备用</p><p><img src="https://i.loli.net/2020/05/10/eDrQmNXxoREO9HG.png" alt="Snipaste.png"></p><p>回到Debian</p><p>依次执行<code>sudo -i</code></p><p><code>vi /var/lib/bluetooth/PC mac/mouse mac/info</code></p><p><img src="https://i.loli.net/2020/05/10/xzRv7NdSfBgorQ5.png" alt="2020-05-10 17-30-17 的屏幕截图.png"></p><p>若在Win10给蓝牙鼠标后导致鼠标mac发生了变化，则需要将mouse mac目录名更改为变化后的值</p><p>编辑Debian下蓝牙鼠标的配对信息</p><blockquote><p>[IdentityResolvingKey]<br>Key=8A3146C8F9BFF77E0F41A8552AE57C0F  #对应Win10下IRK值(字母大写无空格)</p><p>[LongTermKey]<br>Key=6E83992107BBF1E79CCEC278F734C825  #对应Win10下LTK值(字母大写无空格)<br>Authenticated=0  #保持不变<br>EncSize=16  #16<br>EDiv=38290  #对应Win10下EDIV值的10进制<br>Rand=15929999167092382000  #对应Win10下ERand值的10进制</p></blockquote><p>保存后执行<code>service bluetooth restart</code>即可</p><p>参考</p><ul><li><a href="https://blog.csdn.net/huyuan7494/article/details/73571948" target="_blank" rel="noopener">WIN10和Ubuntu共享蓝牙4.0连接配对，鼠标键盘等，罗技M720，小米鼠标</a></li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;鸡掰的雷柏7200M异常的吃电池&lt;/p&gt;
-&lt;p&gt;上次新冠隔离期间突然没电(买不到电池)&lt;/p&gt;
-&lt;p&gt;害我一度没有鼠标用&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="蓝牙" scheme="https://akihi.ink/tags/%E8%93%9D%E7%89%99/"/>
     
   </entry>
   
