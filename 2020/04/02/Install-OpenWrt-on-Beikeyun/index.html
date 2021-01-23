@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
 <meta name="renderer" content="webkit">
 
-<title>贝壳云刷入OpenWrt | Akihi</title>
+<title>给贝壳云刷入OpenWrt | Akihi</title>
 
 <meta name="format-detection" content="telephone=no"/>
 
@@ -64,7 +64,7 @@
 
   
 
-  <meta property="og:title" content="贝壳云刷入OpenWrt | Akihi">
+  <meta property="og:title" content="给贝壳云刷入OpenWrt | Akihi">
 <meta property="og:type" content="blog">
 <meta property="og:url" content="https://akihi.ink/2020/04/02/Install-OpenWrt-on-Beikeyun/">
 <meta property="og:image" content="/favicon-192x192.png">
@@ -76,7 +76,7 @@
 
 
   <meta property="article:published_time" content="Thu Apr 02 2020 23:06:02 GMT+0800">
-  <meta property="article:modified_time" content="Fri Jan 22 2021 14:00:34 GMT+0800">
+  <meta property="article:modified_time" content="Sat Jan 23 2021 23:49:01 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -107,10 +107,10 @@
         "@type": "WebPage",
         "@id": "https://akihi.ink"
     },
-    "headline": "贝壳云刷入OpenWrt",
+    "headline": "给贝壳云刷入OpenWrt",
     
     "datePublished": "2020-04-02T15:06:02.000Z",
-    "dateModified": "2021-01-22T06:00:34.618Z",
+    "dateModified": "2021-01-23T15:49:01.719Z",
     "author": {
         "@type": "Person",
         "name": "",
@@ -190,7 +190,7 @@ if ('serviceWorker' in navigator) {
   <article class="post">
   <header class="post-header">
     <h1 class="post-title">
-      贝壳云刷入OpenWrt
+      给贝壳云刷入OpenWrt
     </h1>
     <section class="post-meta">
       <time datetime="2020-04-02T15:06:02.000Z">
@@ -210,23 +210,19 @@ if ('serviceWorker' in navigator) {
 <p>卖家已经刷过了小钢炮，这种情况</p>
 <p>只需在开机前长按主板上的微动开关即可启动至Maskroom模式</p>
 <p><img src="https://i.loli.net/2020/11/24/MD9sCXnSPvpZLHF.jpg" alt="IMG.jpg"></p>
-<p>我用到的是这种转接板<img src="https://i.loli.net/2020/04/02/CnEPBu82Fb1UT4Y.jpg" alt="Screenshot.jpg"></p>
-<p>再用常见的A to C数据线就能连接笔记本和贝壳云</p>
-<p>Linux安装<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwiki.t-firefly.com%2Fzh_CN%2FROC-RK3328-CC%2Fflash_emmc.html%23rkdeveloptool" target="_blank" rel="noopener">rkdeveloptool</a>后执行</p>
-<p><code>rkdeveloptool ld</code></p>
-<p>图示即为电脑检测到Maskroom设备</p>
-<p><img src="https://i.loli.net/2020/04/02/3nbYO17CzhZ6sLV.png" alt="2020-04-02 19-48-24屏幕截图.png"></p>
-<p>不过后续并不能固件</p>
-<p>于是换到Win10用瑞芯微开发工具</p>
-<p>分别点击<strong>路径</strong>栏右边的 <strong>…</strong> 下面的两个按钮</p>
-<p>导入<code>loader/rk3328_loader_v1.14.249.bin</code>和Openwrt线刷包</p>
-<p>点击<code>执行</code></p>
-<p><code>下载完成</code>提示出现后即可断开数据线用网线连接贝壳云</p>
-<p><img src="https://i.loli.net/2020/04/02/WtLY5dSh9CKJufO.png" alt="Snipaste_2020-04-02_20-08-51.png"></p>
-<p>这样Openwrt就刷好了</p>
+<p>我用的是这种转接板和排针<img src="https://i.loli.net/2020/04/02/CnEPBu82Fb1UT4Y.jpg" alt="Screenshot.jpg"></p>
+<p>再用常见的A to C数据线就能连接笔记本和贝壳云 (徒手按住) </p>
+<p>Windows会有设备接入的提示音</p>
+<p>在瑞芯微开发工具里</p>
+<p><img src="https://i.loli.net/2021/01/23/WYe4suxtSI7BkyX.png" alt=""></p>
+<p>修改system为贝壳云OpenWrt镜像文件的路径</p>
+<p><img src="https://i.loli.net/2021/01/23/HjtbXmkhWYvGEUd.png" alt=""></p>
+<p>点击<code>执行</code>后等待<code>下载完成</code>提示出现</p>
+<p>即可断开数据线用网线连接并配置贝壳云</p>
 <p>参考</p>
 <ul>
 <li><a href="https://www.jianshu.com/p/21d3954231dc" target="_blank" rel="noopener">贝壳云P1 刷机指南</a></li>
+<li><a href="https://t.me/openwrt_flippy" target="_blank" rel="noopener">Flippy_Openwrt</a></li>
 </ul>
 
   </section>
@@ -258,7 +254,7 @@ if ('serviceWorker' in navigator) {
     var disqus_config = function () {
       this.page.url = 'https://akihi.ink/2020/04/02/Install-OpenWrt-on-Beikeyun/';
       this.page.identifier = 'Install-OpenWrt-on-Beikeyun';
-      this.page.title = '贝壳云刷入OpenWrt';
+      this.page.title = '给贝壳云刷入OpenWrt';
     };
     if (!document.getElementById('disqus-embed')) {
       var d = document, s = d.createElement('script');
