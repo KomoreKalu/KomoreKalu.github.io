@@ -6,7 +6,7 @@
   <link href="https://akihi.ink/atom.xml" rel="self"/>
   
   <link href="https://akihi.ink/"/>
-  <updated>2021-03-16T14:27:56.350Z</updated>
+  <updated>2021-03-16T14:30:29.367Z</updated>
   <id>https://akihi.ink/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
@@ -16,9 +16,9 @@
     <link href="https://akihi.ink/2021/03/16/SMS-forwarding/"/>
     <id>https://akihi.ink/2021/03/16/SMS-forwarding/</id>
     <published>2021-03-16T13:51:02.000Z</published>
-    <updated>2021-03-16T14:27:56.350Z</updated>
+    <updated>2021-03-16T14:30:29.367Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h4><ul><li><p>运行OpenWrt的设备（小米路由器3G）</p></li><li><p>可以收短信的3G/4G上网卡（ZTE MF637u）</p></li></ul><p><del>将上网卡插入路由器（这个需要我说吗）</del></p><p>ssh登录路由后</p><p>安装依赖</p><p><code>opkg update &amp;&amp; opkg install git-http bash curl iconv smstools3 kmod-usb-serial kmod-usb-serial-wwan kmod-usb-serial-option usb-modeswitch</code></p><p>克隆仓库</p><p><code>git clone https://hub.fastgit.org/KomoreKalu/Messenger.git &amp;&amp; cd Messenger</code></p><p><code>cp smsd.conf /etc/smsd.conf</code></p><p>按需补充<code>forward.sh</code>内的ID和TOKEN信息并取消toQmsg或toTG的注释</p><p><code>smsd.conf</code> 中的 <code>/dev/ttyUSB1</code>可能需要修改</p><p>再执行 <code>service smstools3 restart</code> 即可</p><p>转发短信效果图</p><img src="https://s3.ax1x.com/2021/03/16/6ycxgg.jpg" style="zoom:60%" /><img src="https://s3.ax1x.com/2021/03/16/6ygrPf.jpg" style="zoom:60%" /><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://lte.pw/lede-openwrt-smstools3-push-sms-to-telegram.html" target="_blank" rel="noopener">Openwrt/LEDE 利用 3G 上网卡推送短信到 Telegram/微信</a></p><p><a href="https://qmsg.zendee.cn/api.html" target="_blank" rel="noopener">Qmsg酱</a></p><p><a href="https://t.me/BotFather" target="_blank" rel="noopener">BotFather</a></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h4><ul><li><p>运行OpenWrt的设备（小米路由器3G）</p></li><li><p>可以收短信的3G/4G上网卡（ZTE MF637u）</p></li></ul><p><del>将上网卡插入路由器（这个需要我说吗）</del></p><p>ssh登录路由后</p><p>安装依赖</p><p><code>opkg update &amp;&amp; opkg install git-http bash curl iconv smstools3 kmod-usb-serial kmod-usb-serial-wwan kmod-usb-serial-option usb-modeswitch</code></p><p>克隆仓库</p><p><code>git clone https://hub.fastgit.org/KomoreKalu/Messenger.git &amp;&amp; cd Messenger</code></p><p><code>cp smsd.conf /etc/smsd.conf</code></p><p>按需补充<code>forward.sh</code>内的ID和TOKEN信息并取消toQmsg或toTG的注释</p><p><code>smsd.conf</code> 中的 <code>/dev/ttyUSB1</code>可能需要修改</p><p>再执行 <code>service smstools3 restart</code> 即可</p><p>转发短信效果图</p><img src="https://s3.ax1x.com/2021/03/16/6ycxgg.jpg" style="zoom:60%" /><img src="https://s3.ax1x.com/2021/03/16/6ygrPf.jpg" style="zoom:60%" /><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://lte.pw/lede-openwrt-smstools3-push-sms-to-telegram.html" target="_blank" rel="noopener">Openwrt/LEDE 利用 3G 上网卡推送短信到 Telegram/微信</a></p><p><a href="https://qmsg.zendee.cn/api.html" target="_blank" rel="noopener">Qmsg酱</a></p><p><a href="https://t.me/BotFather" target="_blank" rel="noopener">BotFather</a></p>]]></content>
     
     
       
