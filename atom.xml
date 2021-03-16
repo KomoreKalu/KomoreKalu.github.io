@@ -6,10 +6,41 @@
   <link href="https://akihi.ink/atom.xml" rel="self"/>
   
   <link href="https://akihi.ink/"/>
-  <updated>2021-02-05T19:02:18.432Z</updated>
+  <updated>2021-03-16T14:16:30.134Z</updated>
   <id>https://akihi.ink/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用smstools3转发短信至TG/QQ</title>
+    <link href="https://akihi.ink/2021/03/16/SMS-forwarding/"/>
+    <id>https://akihi.ink/2021/03/16/SMS-forwarding/</id>
+    <published>2021-03-16T13:51:02.000Z</published>
+    <updated>2021-03-16T14:16:30.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>需要</p><ul><li><p>运行OpenWrt的设备（小米路由器3G）</p></li><li><p>可以收短信的3G/4G上网卡（ZTE MF637u）</p></li></ul><p><del>将上网卡插入路由器（这个需要我说吗）</del></p><p>ssh登录路由后</p><p>安装依赖</p><p><code>opkg update &amp;&amp; opkg install git-http bash curl iconv smstools3 kmod-usb-serial kmod-usb-serial-wwan kmod-usb-serial-option usb-modeswitch</code></p><p>克隆仓库</p><p><code>git clone [https://hub.fastgit.org/KomoreKalu/Messenger.git](https://hub.fastgit.org/KomoreKalu/Messenger.git) &amp;&amp; cd Messenger</code></p><p><code>cp smsd.conf /etc/smsd.conf</code></p><p>按需补充<code>forward.sh</code>内的ID和TOKEN信息并取消toQmsg或toTG的注释</p><p><code>smsd.conf</code> 中的 <code>/dev/ttyUSB1</code>可能需要修改</p><p>再执行 <code>service smstools3 restart</code> 即可</p><p>转发短信效果图</p><img src="https://s3.ax1x.com/2021/03/16/6ycxgg.jpg" style="zoom:60%" /><img src="https://s3.ax1x.com/2021/03/16/6ygrPf.jpg" style="zoom:60%" /><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://lte.pw/lede-openwrt-smstools3-push-sms-to-telegram.html" target="_blank" rel="noopener">Openwrt/LEDE 利用 3G 上网卡推送短信到 Telegram/微信</a></p><p><a href="https://qmsg.zendee.cn/api.html" target="_blank" rel="noopener">Qmsg酱</a></p><p><a href="https://t.me/BotFather" target="_blank" rel="noopener">BotFather</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;需要&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;运行OpenWrt的设备（小米路由器3G）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以收短信的3G/4G上网卡（ZTE MF637u）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;del&gt;将上网卡插入路由器（这个需要我说吗）&lt;/del&gt;&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="OpenWrt" scheme="https://akihi.ink/tags/OpenWrt/"/>
+    
+    <category term="短信" scheme="https://akihi.ink/tags/%E7%9F%AD%E4%BF%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Padavan+OpenWrt旁路由启用ipv6</title>
@@ -105,37 +136,6 @@
     
     
     <category term="书摘" scheme="https://akihi.ink/tags/%E4%B9%A6%E6%91%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Debian上玩以撒</title>
-    <link href="https://akihi.ink/2020/05/22/run-The-Binding-of-Isaac-Rebitrh-on-Debian/"/>
-    <id>https://akihi.ink/2020/05/22/run-The-Binding-of-Isaac-Rebitrh-on-Debian/</id>
-    <published>2020-05-22T09:26:04.000Z</published>
-    <updated>2020-05-22T10:43:58.616Z</updated>
-    
-    <content type="html"><![CDATA[<p>Debian 10 Gnome桌面环境使用了Wayland</p><p>导致一些比较老的游戏不能正常启动，比如以撒</p><p>这个问题折磨了我好久</p><p>最近才找到解决方案</p><hr><p><img src="https://i.loli.net/2020/05/22/I5fxbjZiRAQhTLm.png" alt="2020-05-22 16-15.png"></p><p>在游戏的属性=&gt;常规菜单中找到并勾选</p><p><code>强制使用特定 Steam Play 兼容性工具</code></p><p>选择<code>Proton 5.0-7</code></p><p><img src="https://i.loli.net/2020/05/22/UsP8wxhSON9aV62.png" alt="2020-05-22 16-15.png"></p><p>Steam会自动下载安装Proton</p><p>完成后点击开始游戏</p><p><img src="https://i.loli.net/2020/05/22/7Y4PrqFGdNuQ1VW.png" alt="2020-05-22 16-18.png"></p><p>这时还需要更新游戏</p><p><img src="https://i.loli.net/2020/05/22/lyKGhYPLomDEUF2.png" alt="2020-05-22 16-32.png"></p><p>安装Microsoft VC Redist Package</p><p><img src="https://i.loli.net/2020/05/22/GMoYDT9JidVQ6Bq.png" alt="2020-05-22 16-32.png"></p><p>之后就能正常启动以撒了</p><p><img src="https://i.loli.net/2020/05/22/Q6d2t4P7gGUYazB.png" alt="2020-05-22 16-33.png"></p><p>参考</p><ul><li><a href="https://steamcommunity.com/app/250900/discussions/0/133256240741213021/?ctp=7" target="_blank" rel="noopener">Linux wont start</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Debian 10 Gnome桌面环境使用了Wayland&lt;/p&gt;
-&lt;p&gt;导致一些比较老的游戏不能正常启动，比如以撒&lt;/p&gt;
-&lt;p&gt;这个问题折磨了我好久&lt;/p&gt;
-&lt;p&gt;最近才找到解决方案&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/20</summary>
-      
-    
-    
-    
-    
-    <category term="Linux" scheme="https://akihi.ink/tags/Linux/"/>
-    
-    <category term="Steam" scheme="https://akihi.ink/tags/Steam/"/>
-    
-    <category term="游戏" scheme="https://akihi.ink/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
