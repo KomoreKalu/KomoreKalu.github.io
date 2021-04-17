@@ -76,7 +76,7 @@
 
 
   <meta property="article:published_time" content="Sat Apr 17 2021 13:42:09 GMT+0800">
-  <meta property="article:modified_time" content="Sat Apr 17 2021 23:59:20 GMT+0800">
+  <meta property="article:modified_time" content="Sun Apr 18 2021 00:49:15 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -110,7 +110,7 @@
     "headline": "博客启用HTTP严格传输安全(HSTS)",
     
     "datePublished": "2021-04-17T05:42:09.000Z",
-    "dateModified": "2021-04-17T15:59:20.390Z",
+    "dateModified": "2021-04-17T16:49:15.476Z",
     "author": {
         "@type": "Person",
         "name": "",
@@ -208,21 +208,28 @@ if ('serviceWorker' in navigator) {
 </aside>
 
   <section class="post-content">
-    <p>前一阵子就打算给博客启用HSTS</p>
-<p>但<a href="https://github.com/isaacs/github/issues/1249" target="_blank" rel="noopener">Github Pages并不支持这个</a></p>
-<p>今天又查了一下</p>
+    <a id="more"></a>
+
+<p>前一阵子就打算给博客启用HSTS</p>
+<p><a href="https://github.com/isaacs/github/issues/1249" target="_blank" rel="noopener">但Github Pages并不支持这个</a></p>
+<p>今天查询一番后</p>
 <p>发现可以通过套CloudFlare启用HSTS</p>
-<p>以下是操作过程</p>
+<p>简单记录一下操作过程</p>
+<p><del>PS: 在好久前我就使用CF解析博客了 不过当时并未留意到它自带HSTS</del></p>
+<p><del>如果你的域名服务商不是CF 需要将名称服务器(NameServer)切换至CF才能进行后续的操作</del></p>
 <p>在博客对应域名的 <code>SSL/TLS &gt; 边缘证书</code>中找到<code>HTTP严格传输安全(HSTS)</code></p>
 <p><img src="https://z3.ax1x.com/2021/04/17/c52tij.png" alt=""></p>
 <p><img src="https://z3.ax1x.com/2021/04/17/c52cFJ.png" alt=""></p>
 <p>点击启用并按如下设置</p>
-<p><img src="https://z3.ax1x.com/2021/04/17/c52WS1.png" alt=""></p>
-<p>注意其中<code>最长期限标头</code>需要设置为12个月</p>
-<p>之后可以访问<a href="https://hstspreload.org" target="_blank" rel="noopener">hstspreload.org</a></p>
+<img src ="https://z3.ax1x.com/2021/04/17/c52WS1.png" style="zoom:80%" />
+
+<p>注意其中<code>最长期限标头(max-age)</code>需要设置为12个月</p>
+<p>之后访问<a href="https://hstspreload.org" target="_blank" rel="noopener">hstspreload.org</a></p>
 <p>查询自己的域名</p>
 <p><img src="https://z3.ax1x.com/2021/04/17/c5Rzg1.png" alt=""></p>
-<p>submit之后就可以坐等域名进入preload list辣</p>
+<p>submit之后就可以坐等域名进入preload list咯</p>
+<img src ="https://z3.ax1x.com/2021/04/18/c54VC4.jpg" style="zoom:50%" />
+
 
   </section>
   <footer class="post-meta">
