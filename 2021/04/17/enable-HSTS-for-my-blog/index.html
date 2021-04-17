@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
 <meta name="renderer" content="webkit">
 
-<title>归档: 2018/4 - Akihi</title>
+<title>博客启用HTTP严格传输安全(HSTS) - Akihi</title>
 
 <meta name="format-detection" content="telephone=no"/>
 
 
 
-  <meta name="keywords" content="akihi">
+  <meta name="keywords" content="akihi,tag.name">
 
 
 
@@ -64,16 +64,19 @@
 
   
 
-  <meta property="og:title" content="归档: 2018/4 - Akihi">
+  <meta property="og:title" content="博客启用HTTP严格传输安全(HSTS) - Akihi">
 <meta property="og:type" content="blog">
-<meta property="og:url" content="https://akihi.ink/archives/2018/04/">
+<meta property="og:url" content="https://akihi.ink/2021/04/17/enable-HSTS-for-my-blog/">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/inkubur/inkubur.github.io/img/favicon-192x192.png">
 
 
-<meta property="og:article:tag" content="akihi">
+<meta property="og:article:tag" content="akihi,tag.name">
 
 
 
+
+  <meta property="article:published_time" content="Sat Apr 17 2021 13:42:09 GMT+0800">
+  <meta property="article:modified_time" content="Sat Apr 17 2021 23:59:20 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -95,6 +98,40 @@
 
   
 
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://akihi.ink"
+    },
+    "headline": "博客启用HTTP严格传输安全(HSTS)",
+    
+    "datePublished": "2021-04-17T05:42:09.000Z",
+    "dateModified": "2021-04-17T15:59:20.390Z",
+    "author": {
+        "@type": "Person",
+        "name": "",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/inkubur/inkubur.github.io/img/avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Akihi",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/inkubur/inkubur.github.io/img/favicon-192x192.png"
+        }
+    },
+    "keywords": "akihi,tag.name",
+    "description": ""
+}
+</script>
 
 
   
@@ -133,7 +170,7 @@ if ('serviceWorker' in navigator) {
   <div class="nav-wrapper">
     <ul>
       
-        <li><a class="nav-link nav-link__active" href="/archives">归档</a></li>
+        <li><a class="nav-link " href="/archives">归档</a></li>
       
         <li><a class="nav-link " href="/rss">RSS</a></li>
       
@@ -152,30 +189,91 @@ if ('serviceWorker' in navigator) {
 
     <main class="main">
       
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      博客启用HTTP严格传输安全(HSTS)
+    </h1>
+    <section class="post-meta">
+      <time datetime="2021-04-17T05:42:09.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2021-04-17
+</time>
 
-<article class="archive">
-  <header class="archive-header">
-    <h1 class="archive-title">归档</h1>
+    </section>
   </header>
-  <section class="archive-content">
-    <p class="counter">目前共有 35 文章。</p>
-    
-      <h2 class="year">2018</h2>
-      <ul class="archive-group">
-        
-          <li>
-            <a href="/2018/04/25/Firefly-Lane/">萤火虫小巷</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/19/hackers&amp;painters/">黑客与画家</a>
-          </li>
-        
-      </ul>
-    
+  <aside class="post-aside">
+  
+
+</aside>
+
+  <section class="post-content">
+    <p>前一阵子就打算给博客启用HSTS</p>
+<p>但<a href="https://github.com/isaacs/github/issues/1249" target="_blank" rel="noopener">Github Pages并不支持这个</a></p>
+<p>今天又查了一下</p>
+<p>发现可以通过套CloudFlare启用HSTS</p>
+<p>以下是操作过程</p>
+<p>在博客对应域名的 <code>SSL/TLS &gt; 边缘证书</code>中找到<code>HTTP严格传输安全(HSTS)</code></p>
+<p><img src="https://z3.ax1x.com/2021/04/17/c52tij.png" alt=""></p>
+<p><img src="https://z3.ax1x.com/2021/04/17/c52cFJ.png" alt=""></p>
+<p>点击启用并按如下设置</p>
+<p><img src="https://z3.ax1x.com/2021/04/17/c52WS1.png" alt=""></p>
+<p>注意其中<code>最长期限标头</code>需要设置为12个月</p>
+<p>之后可以访问<a href="https://hstspreload.org" target="_blank" rel="noopener">hstspreload.org</a></p>
+<p>查询自己的域名</p>
+<p><img src="https://z3.ax1x.com/2021/04/17/c5Rzg1.png" alt=""></p>
+<p>submit之后就可以坐等域名进入preload list辣</p>
+
   </section>
+  <footer class="post-meta">
+  
+
+  
+<section class="tags">
+  
+    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+      <i class="fas fa-tag" aria-hidden></i>
+      博客
+    </a>
+  
+</section>
+
+
+</footer>
+
+  <div class="post-end" data-text="完"></div>
 </article>
 
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://akihi.ink/2021/04/17/enable-HSTS-for-my-blog/';
+      this.page.identifier = 'enable-HSTS-for-my-blog';
+      this.page.title = '博客启用HTTP严格传输安全(HSTS)';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//akihi.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
 
 
 
