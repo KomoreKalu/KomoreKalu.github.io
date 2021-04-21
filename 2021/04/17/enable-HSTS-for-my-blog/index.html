@@ -78,7 +78,7 @@
 
 
   <meta property="article:published_time" content="Sat Apr 17 2021 13:42:09 GMT+0800">
-  <meta property="article:modified_time" content="Tue Apr 20 2021 21:10:18 GMT+0800">
+  <meta property="article:modified_time" content="Wed Apr 21 2021 16:32:45 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -112,7 +112,7 @@
     "headline": "博客启用HTTP严格传输安全(HSTS)",
     
     "datePublished": "2021-04-17T05:42:09.000Z",
-    "dateModified": "2021-04-20T13:10:18.154Z",
+    "dateModified": "2021-04-21T08:32:45.537Z",
     "author": {
         "@type": "Person",
         "name": "",
@@ -218,26 +218,28 @@ if ('serviceWorker' in navigator) {
 <p><del>PS: 在好久前我就使用CF解析博客了 不过当时并未留意到它自带HSTS</del></p>
 <p><del>如果你的域名服务商不是CF 需要将名称服务器(NameServer)切换至CF才能进行后续的操作</del></p>
 <p>在博客对应域名的 <code>SSL/TLS &gt; 边缘证书</code>中找到<code>HTTP严格传输安全(HSTS)</code></p>
-<img src ="https://z3.ax1x.com/2021/04/17/c52tij.png" style="zoom:60%" />
+<img src ="https://z3.ax1x.com/2021/04/17/c52tij.png"  />
 
-<img src ="https://z3.ax1x.com/2021/04/17/c52cFJ.png" style="zoom:60%" />
+<img src ="https://z3.ax1x.com/2021/04/17/c52cFJ.png" />
 
 <p>点击启用并按如下设置</p>
-<img src ="https://z3.ax1x.com/2021/04/17/c52WS1.png" style="zoom:60%" />
-
+<p><img src="https://z3.ax1x.com/2021/04/17/c52WS1.png" alt=""></p>
 <p>注意其中<code>最长期限标头(max-age)</code>需要设置为12个月</p>
 <p>之后访问<a href="https://hstspreload.org" target="_blank" rel="noopener">hstspreload.org</a></p>
 <p>查询自己的域名</p>
-<img src ="https://z3.ax1x.com/2021/04/17/c5Rzg1.png" style="zoom:60%" />
+<img src ="https://z3.ax1x.com/2021/04/17/c5Rzg1.png" />
 
 <p>submit之后就可以坐等域名进入preload list咯</p>
-<img src ="https://z3.ax1x.com/2021/04/18/c54VC4.jpg" style="zoom:20%" />
+<img src ="https://z3.ax1x.com/2021/04/18/c54VC4.jpg" width="35%" height="35%" />
 
-<blockquote>
+<hr>
 <p>04-20</p>
 <p>域名已进入preload list</p>
-<img src ="https://z3.ax1x.com/2021/04/20/cHatjU.png" style="zoom:55%"/>
-</blockquote>
+<img src ="https://z3.ax1x.com/2021/04/20/cHatjU.png" />
+
+
+
+
 
   </section>
   <footer class="post-meta">
