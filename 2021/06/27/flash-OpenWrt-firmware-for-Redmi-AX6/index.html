@@ -80,7 +80,7 @@
 
 
   <meta property="article:published_time" content="Sun Jun 27 2021 23:22:49 GMT+0800">
-  <meta property="article:modified_time" content="Mon Jun 28 2021 04:02:46 GMT+0800">
+  <meta property="article:modified_time" content="Mon Jun 28 2021 04:12:37 GMT+0800">
 
 
 <meta name="twitter:card" content="summary">
@@ -114,7 +114,7 @@
     "headline": "红米AX6刷入OpenWrt固件",
     
     "datePublished": "2021-06-27T15:22:49.000Z",
-    "dateModified": "2021-06-27T20:02:46.324Z",
+    "dateModified": "2021-06-27T20:12:37.513Z",
     "author": {
         "@type": "Person",
         "name": "",
@@ -218,13 +218,13 @@ if ('serviceWorker' in navigator) {
 <a id="more"></a>
 
 <h4 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h4><ul>
-<li><p>一台电脑</p>
+<li><p>一台电脑（能ssh执行命令的设备）</p>
 </li>
 <li><p>一个OpenWrt系统的路由器（我使用的是小米路由器3G，以下简称R3G）</p>
 </li>
 </ul>
 <h4 id="配置OpenWrt服务器"><a href="#配置OpenWrt服务器" class="headerlink" title="配置OpenWrt服务器"></a>配置OpenWrt服务器</h4><p>电脑连接R3G（无线或有线均可）</p>
-<p>SSH连接R3G后执行如下命令创建文件</p>
+<p>ssh连接R3G后执行如下命令创建文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/lua/luci/controller/admin/xqsystem.lua</span><br></pre></td></tr></table></figure>
 
 <p>输入以下内容并保存</p>
@@ -271,6 +271,7 @@ if ('serviceWorker' in navigator) {
 
 <p>设置env</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">nvram set flag_last_success=0</span><br><span class="line">nvram set flag_boot_rootfs=0</span><br><span class="line">nvram set flag_boot_success=1</span><br><span class="line">nvram set flag_try_sys1_failed=0</span><br><span class="line">nvram set flag_try_sys2_failed=0</span><br><span class="line">nvram set boot_wait=on</span><br><span class="line">nvram set uart_en=1</span><br><span class="line">nvram set telnet_en=1</span><br><span class="line">nvram set ssh_en=1</span><br><span class="line">nvram commit</span><br></pre></td></tr></table></figure>
+<img src="https://z3.ax1x.com/2021/06/28/RtZhNj.png" />
 
 <p>上传qsdk固件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp xiaomimtd12.bin root@192.168.31.1:/tmp</span><br></pre></td></tr></table></figure>
@@ -310,6 +311,7 @@ if ('serviceWorker' in navigator) {
 <p>刷入qsdk后 后台/ssh ip为192.168.1.1 无密码</p>
 <p>scp上传/下载文件直接在本地执行</p>
 <p>操作路由器的命令在ssh连接路由器后执行</p>
+<p>目前没有pb-boot不建议更新OpenWrt以免变砖</p>
 <h4 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h4><ul>
 <li><p><a href="https://www.right.com.cn/forum/thread-4060726-1-1.html" target="_blank" rel="noopener">红米AX6 SSH解锁和挂载overlay方法</a></p>
 </li>
